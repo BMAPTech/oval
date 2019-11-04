@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+        <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">       
+        <title>OVAL</title>
+    </head>
+    <body onload="onLoad()">
+        <div class="body">
+            <div class="panel">
+                <input class="form-group" placeholder="Username" type="text" required>
+                <input class="form-group" placeholder="Password" type="text" required>
+                <input class="form-group" placeholder="Email" type="text" required>
+                <input class="form-group" placeholder="Phone" type="text" required>
+            </div>
+            <div class="panel">
+                <button class="block">Sign Up</button>
+            </div>
+        </div>
+        <script type="text/javascript" src="cordova.js" charset="utf-8"></script>
+        <script type="text/javascript" charset="utf-8">
+            function onLoad() {
+                document.addEventListener("deviceready", onDeviceReady, false);
+            }
+
+            function onDeviceReady() {
+                console.log(navigator.camera);
+            }
+
+            const element =  document.querySelector('.body')
+            element.classList.add('animated', 'fadeInRight')
+
+        </script>
+    </body>
+</html>
